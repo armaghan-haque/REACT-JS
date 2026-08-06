@@ -189,3 +189,24 @@ A component is a reusable, independent piece of a user interface (UI). Component
 Instead of writing the same code multiple times, we can create a component once and reuse it wherever needed. This makes the code easier to maintain and manage.
 
 "Props are used to pass data from a parent component to a child component. Props drilling is passing those props through multiple components to reach a deeply nested child, which can be avoided using Context API or Redux."
+
+function App() {
+  return (
+    <Student
+      name="Alice"
+      age={21}
+      course="React"
+    />
+  );
+}
+
+Receive them:
+function Student(props) {
+  return (
+    <>
+      <h2>{props.name}</h2>
+      <p>{props.age}</p>
+      <p>{props.course}</p>
+    </>
+  );
+}
