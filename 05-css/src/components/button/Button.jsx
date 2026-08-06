@@ -3,7 +3,7 @@ import styles from './Button.module.css'
 
 const Button = () => {
   return (
-    <div style={styles.btn}>
+    <div className={styles.btn}>
       This is Button
     </div>
   )
