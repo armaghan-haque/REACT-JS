@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div>
       
-      <button onClick={btnclicked}> Click here </button>
+      <button onDoubleClick={btnclicked}> Click here </button>
 
     </div>
   )
