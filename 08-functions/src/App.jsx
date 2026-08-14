@@ -6,13 +6,18 @@ const App = () => {
     console.log('btn is clicked')
   } 
 
+  function mouseEnter(){
+    console.log('Mouse Entered')
+  }
+
   return (
     <div>
       
-      <button onDoubleClick={btnclicked}> Click here </button>
+      <button onMouseEnter={mouseEnter} onDoubleClick={btnclicked}> Click here </button>
 
     </div>
   )
 }
 
 export default App
+
