@@ -1,23 +1,29 @@
 import React from 'react'
 
 const App = () => {
+  
+    const pagescrolling = (elem)=>{
+      if(elem>0){
+      console.log('scrolling up....')
+      }
+      else{
+      console.log('scrolling down....')
+      }
 
-  function btnclicked(){
-    console.log('btn is clicked')
-  } 
 
-  function mouseEnter(){
-    console.log('Mouse Entered')
-  }
+    } 
+  
+    return (
+    <div onWheel={(elem)=>{
+      pagescrolling(elem.deltaY)
+    }}>
 
-  return (
-    <div>
-      
-      <button onMouseEnter={mouseEnter} onDoubleClick={btnclicked}> Click here </button>
+      <div className="page1"></div>
+      <div className="page2"></div>
+      <div className="page3"></div>
 
     </div>
   )
 }
 
 export default App
-
