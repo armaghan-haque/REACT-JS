@@ -8,3 +8,19 @@ html,body {
     height: 100%;
     width: 100%;
 }
+
+button{
+  padding: 10px 20px ;
+  margin: 10px;
+  background-color: gray;
+  border: none;
+  border-radius: 5px;
+}
+
+h1{
+  padding: 10px 75px ;
+  margin: 10px;
+  width: fit-content;
+  font-size: 100px;
+  background-color: gray;
+}

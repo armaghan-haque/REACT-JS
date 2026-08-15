@@ -1,16 +1,26 @@
-# React + Vite
+import React from 'react'
+import { useState } from 'react'
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+const App = () => {
 
-Currently, two official plugins are available:
+  const [num, setNum] = useState(10)
+  const [username, setusername] = useState('arman')
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+  function changenum(){
+    setNum(30)
+    setusername('manav')
+  }
 
-## React Compiler
+  return (
+    <div>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+      <h1>value of num is {num} <br />value of user is {username} </h1>
+      <button onClick={changenum}>Click</button>
 
-## Expanding the ESLint configuration
+    </div>
+  )
+}
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+export default App
+
+------------------------------------
