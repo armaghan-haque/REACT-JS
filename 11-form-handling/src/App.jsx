@@ -3,8 +3,8 @@ import React from 'react'
 const App = () => {
   
   const submitHandler = (e)=>{
-    e.preventDefault
-    console.log()
+    e.preventDefault()
+    console.log('form submitted')
   }
   
   return (
