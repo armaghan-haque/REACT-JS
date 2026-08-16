@@ -4,7 +4,7 @@ const App = () => {
   
   const submitHandler = (e)=>{
     e.preventDefault
-    console.log('Form submitted')
+    console.log()
   }
   
   return (
