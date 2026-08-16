@@ -9,3 +9,9 @@ html,body {
     width: 100%;
 }
 
+input,button{
+
+  padding: 10px 20px;
+  margin: 20px;
+  font-size: 15px;
+}
