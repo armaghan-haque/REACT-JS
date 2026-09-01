@@ -1,16 +1,117 @@
-# React + Vite
+import React from 'react'
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+const App = () => {
+  
+  async function getData(){
+    const response = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+     
+    console.log(response)
+  }
+  
+  return (
+    <div>
+      <button onClick={getData}>Get Data</button>
+    </div>
+  )
+}
 
-Currently, two official plugins are available:
+export default App
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+-----------------------------------------------------------
 
-## React Compiler
+import React from 'react'
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+const App = () => {
+  
+  const getData = async () =>{
+    const response = await fetch('https://jsonplaceholder.typicode.com/albums')
+    const data = await response.json()
 
-## Expanding the ESLint configuration
+    console.log(data)
+  }
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+  return (
+    <div>
+      <button onClick={getData}>Get Data</button>
+    </div>
+  )
+}
+
+export default App
+
+-----------------------------------------------------------
+
+ npm i axios
+
+ import axios from 'axios'
+
+const App = () => {
+  
+  const getData = async () =>{
+    const response = await axios .get('https://jsonplaceholder.typicode.com/albums')
+
+    console.log(response.data)
+  }
+
+  return (
+    <div>
+      <button onClick={getData}>Get Data</button>
+    </div>
+  )
+}
+
+export default App
+
+-------------------------------------------------------------
+with the help of destructuring
+
+import axios from 'axios'
+
+const App = () => {
+  
+  const getData = async () =>{
+    const {data} = await axios .get('https://jsonplaceholder.typicode.com/albums')
+
+    console.log(data)
+  }
+
+  return (
+    <div>
+      <button onClick={getData}>Get Data</button>
+    </div>
+  )
+}
+
+export default App
+
+-------------------------------------------------------------
+
+import axios from 'axios'
+import { useState } from 'react'
+
+const App = () => {
+  
+  const [data, setdata] = useState([])
+
+  const getData = async ()=>{
+    const response = await axios.get('https://picsum.photos/v2/list')
+
+    console.log(response.data)
+
+    setdata(response.data)
+  }
+
+  return (
+    <div>
+      <button onClick={getData}>Get Data</button> 
+      <div>
+        {data.map(function(elem,idx){
+          return <h3>hello , {elem.author} , {idx}</h3>
+        })}
+      </div>    
+    </div>
+  )
+}
+
+export default App
+
