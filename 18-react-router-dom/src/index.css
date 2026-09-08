@@ -3,9 +3,37 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'helvetica neue';
+    color: white;
 }
 html,body {
     height: 100%;
     width: 100%;
-    background-color: rgba(255, 245, 245, 0.853);
+}
+
+body{
+    background-color: black;
+}
+
+h2{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-decoration: underline;
+    font-size: 70px;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: rgb(84, 12, 11);
+}
+
+.nav div{
+    display: flex;
+    align-items: center;
+    gap: 40px
+
 }
