@@ -2,8 +2,12 @@ import React from 'react'
 
 const Kids = () => {
   return (
-    <div>Kids</div>
+    <div>
+
+           <h1>kids page</h1>
+
+    </div>
   )
 }
 
-export default Kids
+export default Kid
