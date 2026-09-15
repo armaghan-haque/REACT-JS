@@ -9,3 +9,5 @@ const Kids = () => {
 }
 
 export default Kid
+
+
